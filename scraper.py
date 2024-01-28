@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import time
 import pandas as pd
 
-START_URL = "https://en.wikipedia.org/wiki/List_of_brightest_stars"
+START_URL = "https://en.wikipedia.org/wiki/Lists_of_stars"
 
 browser = webdriver.Edge("E:/projects/edgedriver_win64/msedgedriver.exe")
 browser.get(START_URL)
@@ -50,6 +50,8 @@ for i in range(0, len(scraped_data)):
 
     required_data = [Star_names, Distance, Mass, Radius, Lum]
     stars_data.append(required_data)
+
+print(stars_data)
 
 headers = ['Star_names', 'Distance', 'Mass', 'Radius', 'Luminosity']
 
